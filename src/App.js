@@ -13,7 +13,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://react-http-33d0d-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json');
+      const response = await fetch('link');
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
@@ -54,7 +54,7 @@ function App() {
   }, [fetchMoviesHandler]);
 
   async function addMovieHandler(movie) {
-    const response = await fetch('https://react-http-33d0d-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json', {
+    const response = await fetch('link', {
       method: 'POST',
       body: JSON.stringify(movie),
       headers: { 'Content-Type': 'application/json' }
